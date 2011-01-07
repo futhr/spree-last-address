@@ -1,7 +1,3 @@
-require "rails/all"
-require 'resource_controller'
-
-require 'admin/orders_controller'
 require 'find_address'
 
 Admin::OrdersController.class_eval do
