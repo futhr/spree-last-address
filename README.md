@@ -5,6 +5,9 @@ Relieves the customer of typing his address again on a second order. (As this un
 
 Prefills any address during checkout with the last used address.
 
+Also fills in address in admin if the email address is given.
+
+And (as added extra) creates dummy addresses in admin interface if no email or address info is set. But only if you set dummy_addresses config option.
 
 No db changes, one query during checkout more.
 

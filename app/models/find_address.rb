@@ -23,4 +23,14 @@ class FindAddressHelper
     end
   end
   
+  def self.set_dummy(hash , email )
+    dummy = email[0,email.index("@")] 
+    [:city, :address1, :address2,  :lastname, :firstname].each do |attribute|
+      hash[attribute] = dummy
+    end
+    hash[:zipcode] = "1000" 
+    hash[:phone] = "0202020"
+    hash[:country_id] = Spree::Config[:default_country_id]
+  end
+  
 end

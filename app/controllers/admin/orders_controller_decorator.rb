@@ -5,15 +5,23 @@ Admin::OrdersController.class_eval do
 
   def fix_addresses
     if !@order.line_items.empty?
-      unless @order.complete?
+      if @order.cart? # only fix this on new orders
         if params[:order].key?(:email) and params[:order].key?(:bill_address_attributes) and
-           params[:order][:bill_address_attributes][:city] == ""
-          puts "ORDERS CALLED -#{params[:order][:bill_address_attributes]}"
-          bill_address , ship_address = FindAddressHelper.find_address(params[:order][:email])
-          return unless bill_address 
-          puts "Setting Bill to #{bill_address}"
-          FindAddressHelper.set_params(params[:order][:bill_address_attributes] , bill_address)
-          FindAddressHelper.set_params(params[:order][:ship_address_attributes] , ship_address)
+          params[:order][:bill_address_attributes][:city] == "" and 
+          params[:order][:bill_address_attributes][:firstname] == "" and 
+          params[:order][:bill_address_attributes][:lastname] == "" 
+          if params[:order][:email] == "" and Spree::Config[:dummy_addresses]
+            params[:order][:email] = @order.user.email
+            puts "Setting to dummy #{@order.user.email}"
+            FindAddressHelper.set_dummy(params[:order][:bill_address_attributes] , @order.user.email)
+            FindAddressHelper.set_dummy(params[:order][:ship_address_attributes] , @order.user.email)
+          else
+            bill_address , ship_address = FindAddressHelper.find_address(params[:order][:email])
+            return unless bill_address 
+            puts "Setting Bill to #{bill_address}"
+            FindAddressHelper.set_params(params[:order][:bill_address_attributes] , bill_address)
+            FindAddressHelper.set_params(params[:order][:ship_address_attributes] , ship_address)
+          end
         end
       end
     end
