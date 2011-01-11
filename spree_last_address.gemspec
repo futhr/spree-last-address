@@ -1,13 +1,13 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_last_address'
-  s.version     = '1.0.0'
+  s.version     = '0.0.1'
   s.summary     = 'Add gem summary here'
-  #s.description = 'Add (optional) gem description here'
+  s.description = 'Grab the last (spree) orders address'
   s.required_ruby_version = '>= 1.8.7'
 
-  # s.author            = 'David Heinemeier Hansson'
-  # s.email             = 'david@loudthinking.com'
+   s.author            = 'Torsten Rüger'
+  s.email             = 'torsten@lightning.nu'
   # s.homepage          = 'http://www.rubyonrails.org'
   # s.rubyforge_project = 'actionmailer'
 
