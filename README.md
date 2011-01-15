@@ -7,9 +7,16 @@ Prefills any address during checkout with the last used address.
 
 Also fills in address in admin if the email address is given.
 
-And (as added extra) creates dummy addresses in admin interface if no email or address info is set. But only if you set dummy_addresses config option.
-
 No db changes, one query during checkout more.
+
+Extras
+=====
+
+As extra admin functionality there are two small changes wich make the life of admin easier. You will need to set the config option :dummy_addresses to activate them:
+
+- creates dummy addresses in admin interface if no email or address info is set. 
+
+- if the email is changed from an "anonymous" one to a real one, the change is also made to the User object that made the order.
 
 PS: The bizzare ActiveRecord::AssociationTypeMismatch error has hit me and so this currently only works with config.cache_classes = true  , set also in development. (There seems to be a hidden class loading issue somewhere)
 

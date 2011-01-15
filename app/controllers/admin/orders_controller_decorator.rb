@@ -2,7 +2,8 @@ require 'find_address'
 
 Admin::OrdersController.class_eval do
   before_filter :fix_addresses, :only => [:update]
-
+  after_filter :change_user_email , :only => [:update]
+  
   def fix_addresses
     if !@order.line_items.empty?
       if @order.cart? # only fix this on new orders
@@ -24,6 +25,14 @@ Admin::OrdersController.class_eval do
           end
         end
       end
+    end
+  end
+
+  def change_user_email
+    if @order.user.anonymous? and Spree::Config[:dummy_addresses]
+      @order.user.email = params[:order][:email]
+      @order.user.save
+      #puts "changed anonymous to #{@order.email}"
     end
   end
 end
