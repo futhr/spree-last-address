@@ -1,4 +1,5 @@
 require 'find_address'
+require 'admin/orders_controller'
 
 Admin::OrdersController.class_eval do
   before_filter :fix_addresses, :only => [:update]
