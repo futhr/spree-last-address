@@ -1,10 +1,8 @@
-require 'checkout_controller'
 require 'find_address'
 
 CheckoutController.class_eval do
 
   private
-
 
   def before_address
     #puts "BEFORE ADDRESS2 called user= #{@order}  #{@order.email}"
