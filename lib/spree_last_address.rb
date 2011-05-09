@@ -1,4 +1,3 @@
-require 'spree_core'
 require 'spree_last_address_hooks'
 
 module SpreeLastAddress
