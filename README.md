@@ -9,10 +9,18 @@ Also fills in address in admin if the email address is given.
 
 No db changes, one query during checkout more.
 
+Installation
+=============
+Just put in your Gemfile 
+
+gem 'spree_last_address', :git => "git://github.com/dancinglightning/spree-last-address.git"
+
+No assets, no migrations, not rake tasks.
+
 Extras
 =====
 
-As extra admin functionality there are two small changes wich make the life of admin easier. You will need to set the config option :dummy_addresses to activate them:
+As extra admin functionality there are two small changes which make the life of admin easier. You will need to set the config option :dummy_addresses to activate them:
 
 - creates dummy addresses in admin interface if no email or address info is set. 
 
