@@ -5,6 +5,7 @@ Admin::OrdersController.class_eval do
   after_filter :change_user_email , :only => [:update]
   
   def fix_addresses
+    load_order # used to be done, but not anymore. Save to call twice though
     if !@order.line_items.empty?
       if @order.cart? # only fix this on new orders
         if params[:order].key?(:email) and params[:order].key?(:bill_address_attributes) and
