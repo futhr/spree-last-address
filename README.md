@@ -26,8 +26,7 @@ As extra admin functionality there are two small changes which make the life of 
 
 - if the email is changed from an "anonymous" one to a real one, the change is also made to the User object that made the order.
 
-PS: The bizzare ActiveRecord::AssociationTypeMismatch error has hit me and so this currently only works with config.cache_classes = true  , set also in development. (There seems to be a hidden class loading issue somewhere)
-
+PS: I pulled best commits from forked reps. Thanks to kenscotthlebek,  TylerRick
 
 
 Copyright (c) 2010 [Torsten Rüger], released under the New BSD License
