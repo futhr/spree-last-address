@@ -5,7 +5,7 @@ CheckoutController.class_eval do
   private
 
   def before_address
-    return if @order.bill_address or @order.ship_adress
+    return if @order.bill_address or @order.ship_address
     #puts "BEFORE ADDRESS2 called user= #{@order}  #{@order.email}"
     @order.bill_address , @order.ship_address = FindAddressHelper.find_address(@order.email)
     # in case none found
