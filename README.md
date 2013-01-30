@@ -25,19 +25,6 @@ Just put this in your Gemfile:
 
 gem 'spree_last_address', :git => "git://github.com/TylerRick/spree_last_address.git"
 
-Admin extras
-============
-
-Includes some small changes which make the life of admin easier.
-
-When editing an order, and you don't specify a billing address, it will attempt to automatically fill that in from the user's previous orders.
-
-You will need to set the config option :dummy_addresses to activate the following features:
-
-- creates dummy addresses in admin interface if no email or address info is set. 
-
-- if the email is changed from an "anonymous" one to a real one, the change is also made to the User object that made the order.
-
 Contributors
 ============
 

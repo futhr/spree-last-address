@@ -24,21 +24,5 @@ module SpreeLastAddress
       #puts "Found address= #{bill_address} "
       return bill_address , ship_address
     end
-
-    def set_params(hash , address )
-      [:city, :address1, :address2, :zipcode, :country_id, :lastname, :firstname, :phone, :state_id].each do |attribute|
-        hash[attribute] = address.send(attribute)
-      end
-    end
-
-    def set_dummy(hash , email )
-      dummy = email[0,email.index("@")]
-      [:city, :address1, :address2,  :lastname, :firstname].each do |attribute|
-        hash[attribute] = dummy
-      end
-      hash[:zipcode] = "1000"
-      hash[:phone] = "0202020"
-      hash[:country_id] = Spree::Config[:default_country_id]
-    end
   end
 end
