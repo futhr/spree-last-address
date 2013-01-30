@@ -1,0 +1,5 @@
+"1.2.x"  => { :branch => "master" }
+"1.1.x"  => { :branch => "master" }
+"1.0.x"  => { :branch => "master" }
+"0.70.x" => { :ref => "fab7efd6c813dd4accc86ebcf2293fc34a13c89d" }
+"0.60.x" => { :ref => "fab7efd6c813dd4accc86ebcf2293fc34a13c89d" }
