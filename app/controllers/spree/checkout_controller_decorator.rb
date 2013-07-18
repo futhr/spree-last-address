@@ -1,7 +1,7 @@
 module Spree
   CheckoutController.class_eval do
 
-  private
+    private
 
     def before_address
       return if @order.bill_address or @order.ship_address
@@ -10,6 +10,5 @@ module Spree
       @order.bill_address ||= preferred_bill_address || last_used_bill_address || Address.default
       @order.ship_address ||= preferred_ship_address || last_used_ship_address || Address.default
     end
-
   end
 end

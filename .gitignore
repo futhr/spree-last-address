@@ -1,4 +1,10 @@
-*.gem
-.bundle
+\#*
+*~
+.#*
+.DS_Store
+coverage
 Gemfile.lock
-pkg/*
+tmp
+pkg
+spec/dummy
+.rvmrc
