@@ -20,6 +20,7 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'capybara/webkit'
 require 'ffaker'
+require 'database_cleaner'
 
 Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
 
