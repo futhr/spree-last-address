@@ -32,6 +32,9 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'sqlite3', '~> 1.3.7'
   s.add_development_dependency 'simplecov', '~> 0.7.1'
   s.add_development_dependency 'database_cleaner'
-  s.add_development_dependency 'fuubar', '>= 0.0.1'
+  s.add_development_dependency 'fuubar', '~> 1.1.1'
   s.add_development_dependency 'pry-rails'
+  s.add_development_dependency 'guard-rspec', '~> 3.0.2'
+  s.add_development_dependency 'launchy', '~> 2.3.0'
+  s.add_development_dependency 'coveralls', '~> 0.6.7'
 end
