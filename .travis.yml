@@ -7,17 +7,6 @@ env:
   - COVERAGE=true
 script:
   - bundle exec rspec spec
-notifications:
-  email:
-    - hi@futhr.io
-  irc:
-    use_notice: true
-    skip_join: true
-    channels:
-      - "irc.freenode.org#futhr"
 rvm:
   - 1.9.3
   - 2.0.0
-branches:
-  only:
-    - master
