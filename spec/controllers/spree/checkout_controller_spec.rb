@@ -14,7 +14,6 @@ describe Spree::CheckoutController do
 
   before do
     controller.stub spree_current_user: user
-    controller.stub current_order: order
   end
 
   context "#before_address" do
