@@ -1,4 +1,4 @@
-Copyright (c) 2013 Torsten Rüger
+Copyright (c) 2013 Torsten Rüger and contributors.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,

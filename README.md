@@ -14,7 +14,7 @@ As of Spree 1.2, the `belongs_to :bill_address` and `belongs_to :ship_address` a
 
 ## Installing
 
-Add to your `Gemfile`:
+Add to your `Gemfile`
 ```ruby
 gem 'spree_last_address', github: 'futhr/spree-last-address', branch: '2-0-stable'
 ```
@@ -22,13 +22,6 @@ gem 'spree_last_address', github: 'futhr/spree-last-address', branch: '2-0-stabl
 Run
 
     bundle install
-
-## Kudos
-
-* [kenscotthlebek](https://github.com/kenscotthlebek)
-* [TylerRick](https://github.com/TylerRick) - heavy refactor for spree 1.2
-* [futhr](https://github.com/futhr) - engine refactor for spree 2.0 and tests sponsor
-* [reedkevin88](https://github.com/reedkevin88) - tests
 
 ## Contributing
 
@@ -56,10 +49,11 @@ Starting point:
 * Ensure specs pass by running `bundle exec rspec spec`
 * Submit your pull request
 
-Copyright (c) 2013 Torsten Rüger, released under the [New BSD License][3]
+Copyright (c) 2013 [Torsten Rüger][5] and [contributors][6], released under the [New BSD License][3]
 
 [1]: http://www.fsf.org/licensing/essays/free-sw.html
 [2]: https://github.com/futhr/spree-last-address/issues
 [3]: https://github.com/futhr/spree-last-address/blob/2-0-stable/LICENSE.md
 [4]: https://github.com/swistak/spree-default-addresses
-
+[5]: https://github.com/dancinglightning
+[6]: https://github.com/futhr/spree-last-address/contributors
