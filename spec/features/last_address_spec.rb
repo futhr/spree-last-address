@@ -1,87 +1,72 @@
 require 'spec_helper'
 
-feature "Last Address" do
+feature 'Last Address' do
   stub_authorization!
 
-  given!(:user) { create(:user, email: "kevin@reed.com") }
-  given!(:mug) { create(:product, name: "Rails Mug") }
+  given!(:user) { create(:user) }
+  given!(:product) { create(:product) }
+  given(:address) { build(:address) }
 
   background do
-    add_mug_to_cart
-    click_button "Checkout"
+    add_product_to_cart
+    click_button 'Checkout'
 
     sign_in_as! user
 
     Spree::Order.last.update_column(:email, user.email)
 
-    # Fill in bill address info
-    bill_address = "order_bill_address_attributes"
-    fill_in_address bill_address
+    fill_in_address 'bill'
+    uncheck 'order_use_billing'
+    fill_in_address 'ship'
 
-    # Fill in ship address info
-    ship_address = "order_ship_address_attributes"
-    fill_in_address ship_address
-
-    click_button "Save and Continue"
+    click_button 'Save and Continue'
   end
 
-  context "visit address again,", js: true do
-    scenario "shows the last saved address info" do
-      add_mug_to_cart
-      click_button "Checkout"
+  context 'visit address again,', js: true do
+    scenario 'shows the last saved address info' do
+      add_product_to_cart
+      click_button 'Checkout'
 
-      # Check the bill address values whether it is equal with last saved values
-      bill_address = "order_bill_address_attributes"
-      check_address_info bill_address
-
-      # Check the ship address values whether it is equal with last saved values
-      ship_address = "order_ship_address_attributes"
-      check_address_info ship_address
+      check_address_info 'bill'
+      uncheck 'order_use_billing'
+      check_address_info 'ship'
     end
   end
 
-  def fill_in_address(address)
-    fill_in "#{address}_lastname",  with: "Reed"
-    fill_in "#{address}_firstname", with: "Kevin"
-    fill_in "#{address}_address1",  with: "32390 Ericka Shoals"
-    fill_in "#{address}_address2",  with: "Suite 054"
-    fill_in "#{address}_city",      with: "South Edgarfurt"
-    fill_in "#{address}_zipcode",   with: "16804"
-    fill_in "#{address}_phone",     with: "525.312.6935"
-
-    country_css      = "#{address}_country_id"
-    state_select_css = "#{address}_state_id"
-    state_name_css   = "#{address}_state_name"
-
-    select "United States of America", from: country_css
-    select "Alabama", from: state_select_css
+  def fill_in_address(kind)
+    addr = "order_#{kind}_address_attributes_"
+    fill_in "#{addr}lastname",  with: address.firstname
+    fill_in "#{addr}firstname", with: address.lastname
+    fill_in "#{addr}address1",  with: address.address1
+    fill_in "#{addr}address2",  with: address.address2
+    fill_in "#{addr}city",      with: address.city
+    fill_in "#{addr}zipcode",   with: address.zipcode
+    fill_in "#{addr}phone",     with: address.phone
+    select 'United States of America', from: "#{addr}country_id"
+    select 'Alabama', from: "#{addr}state_id", match: :first
   end
 
-  def check_address_info(address)
-    find("##{address}_lastname")["value"].should eql "Reed"
-    find("##{address}_firstname")["value"].should eql "Kevin"
-    find("##{address}_address1")["value"].should eql "32390 Ericka Shoals"
-    find("##{address}_address2")["value"].should eql "Suite 054"
-    find("##{address}_city")["value"].should eql "South Edgarfurt"
-    find("##{address}_zipcode")["value"].should eql "16804"
-    find("##{address}_phone")["value"].should eql "525.312.6935"
-
-    country_css      = "#{address}_country_id"
-    state_select_css = "#{address}_state_id"
-
-    find_field(country_css).value.should eql "1"
+  def check_address_info(kind)
+    addr = "order_#{kind}_address_attributes_"
+    find("##{addr}lastname")['value'].should eq address.firstname
+    find("##{addr}firstname")['value'].should eq address.lastname
+    find("##{addr}address1")['value'].should eq address.address1
+    find("##{addr}address2")['value'].should eq address.address2
+    find("##{addr}city")['value'].should eq address.city
+    find("##{addr}zipcode")['value'].should eq address.zipcode
+    find("##{addr}phone")['value'].should eq address.phone
+    find_field("#{addr}country_id").value.should eq '1'
   end
 
-  def add_mug_to_cart
+  def add_product_to_cart
     visit spree.root_path
-    pending "can not find button, think need more setup objects for checkout"
-    click_link mug.name
-    click_button "add-to-cart-button"
+    click_link product.name
+    click_button 'add-to-cart-button'
   end
 
   def sign_in_as!(user)
-    find("#spree_user_email").set(user.email)
-    fill_in "Password", with: "secret"
-    click_button "Login"
+    fill_in 'spree_user_email', with: user.email
+    fill_in 'spree_user_password', with: 'secret'
+    click_button 'Login'
   end
 end
