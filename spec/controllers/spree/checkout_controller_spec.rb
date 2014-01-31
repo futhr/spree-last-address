@@ -45,7 +45,7 @@ describe Spree::CheckoutController do
       order.ship_address = nil
       spree_get :edit, state: 'address'
       controller.instance_eval{ @before_address }
-      puts order.bill_address.should_not be_nil
+      order.bill_address.should_not be_nil
     end
   end
 end

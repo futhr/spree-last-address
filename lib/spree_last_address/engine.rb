@@ -6,10 +6,6 @@ module SpreeLastAddress
 
     config.autoload_paths += %W(#{config.root}/lib)
 
-    config.generators do |g|
-      g.test_framework :rspec
-    end
-
     def self.activate
       Dir.glob(File.join(File.dirname(__FILE__), '../../app/**/*_decorator*.rb')) do |c|
         Rails.configuration.cache_classes ? require(c) : load(c)
@@ -26,7 +22,6 @@ module SpreeLastAddress
         bill_address = order.bill_address.clone if order.bill_address
         ship_address = order.ship_address.clone if order.ship_address
       end
-      # puts "Found address= #{bill_address} "
       return bill_address, ship_address
     end
   end

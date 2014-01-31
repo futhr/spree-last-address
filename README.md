@@ -1,8 +1,8 @@
 # Spree Last Address
 
-[![Build Status](https://secure.travis-ci.org/futhr/spree-last-address.png?branch=2-0-stable)](http://travis-ci.org/futhr/spree-last-address)
+[![Build Status](https://api.travis-ci.org/futhr/spree-last-address.png?branch=master)](http://travis-ci.org/futhr/spree-last-address)
 [![Dependency Status](https://gemnasium.com/futhr/spree-last-address.png)](https://gemnasium.com/futhr/spree-last-address)
-[![Coverage Status](https://coveralls.io/repos/futhr/spree-last-address/badge.png?branch=2-0-stable)](https://coveralls.io/r/futhr/spree-last-address)
+[![Coverage Status](https://coveralls.io/repos/futhr/spree-last-address/badge.png?branch=master)](https://coveralls.io/r/futhr/spree-last-address)
 
 During checkout, causes the address to be prefilled with the address from their most recent order or the user’s saved address (if available).
 
@@ -16,7 +16,7 @@ As of Spree 1.2, the `belongs_to :bill_address` and `belongs_to :ship_address` a
 
 Add to your `Gemfile`
 ```ruby
-gem 'spree_last_address', github: 'futhr/spree-last-address', branch: '2-0-stable'
+gem 'spree_last_address', github: 'futhr/spree-last-address', branch: 'master'
 ```
 
 Run
@@ -49,11 +49,11 @@ Starting point:
 * Ensure specs pass by running `bundle exec rspec spec`
 * Submit your pull request
 
-Copyright (c) 2013 [Torsten Rüger][5] and [contributors][6], released under the [New BSD License][3]
+Copyright (c) 2014 [Torsten Rüger][5] and [contributors][6], released under the [New BSD License][3]
 
 [1]: http://www.fsf.org/licensing/essays/free-sw.html
 [2]: https://github.com/futhr/spree-last-address/issues
-[3]: https://github.com/futhr/spree-last-address/blob/2-0-stable/LICENSE.md
+[3]: https://github.com/futhr/spree-last-address/blob/master/LICENSE.md
 [4]: https://github.com/swistak/spree-default-addresses
 [5]: https://github.com/dancinglightning
-[6]: https://github.com/futhr/spree-last-address/contributors
+[6]: https://github.com/futhr/spree-last-address/graphs/contributors

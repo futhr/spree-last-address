@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Last Address' do
+feature 'Last Address', js: true do
   stub_authorization!
 
   given!(:user) { create(:user) }

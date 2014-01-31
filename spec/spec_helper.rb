@@ -1,4 +1,4 @@
-if ENV['COVERAGE']
+if ENV['CI']
   require 'simplecov'
   require 'coveralls'
   SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
@@ -18,6 +18,8 @@ require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 
 require 'rspec/rails'
 require 'capybara/rspec'
+require 'capybara/rails'
+require 'capybara/poltergeist'
 require 'ffaker'
 require 'database_cleaner'
 
@@ -50,4 +52,6 @@ RSpec.configure do |config|
   config.after do
     DatabaseCleaner.clean
   end
+
+  Capybara.javascript_driver = :poltergeist if ENV['CI']
 end
