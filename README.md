@@ -3,6 +3,8 @@
 [![Build Status](https://api.travis-ci.org/futhr/spree-last-address.png?branch=master)](http://travis-ci.org/futhr/spree-last-address)
 [![Dependency Status](https://gemnasium.com/futhr/spree-last-address.png)](https://gemnasium.com/futhr/spree-last-address)
 [![Coverage Status](https://coveralls.io/repos/futhr/spree-last-address/badge.png?branch=master)](https://coveralls.io/r/futhr/spree-last-address)
+[![Code Climate](https://codeclimate.com/github/futhr/spree-last-address.png)](https://codeclimate.com/github/futhr/spree-last-address)
+[![Gitter chat](https://badges.gitter.im/futhr/spree-last-address.png)](https://gitter.im/futhr/spree-last-address)
 
 During checkout, causes the address to be prefilled with the address from their most recent order or the user’s saved address (if available).
 
