@@ -35,12 +35,12 @@ See corresponding [contribution guidelines][3].
 
 ## License
 
-Copyright (c) 2011-2014 [Tobias Bohwalli][4], [Torsten Rüger][5], and other [contributors][6], released under the [New BSD License][7]
+Copyright (c) 2010-2014 [Tobias Bohwalli][4], [Torsten Rüger][5], and other [contributors][6], released under the [New BSD License][7]
 
 [1]: https://github.com/swistak/spree-default-addresses
 [2]: https://github.com/spree/spree_auth_devise
 [3]: https://github.com/futhr/spree-last-address/blob/master/CONTRIBUTING.md
 [4]: https://github.com/futhr
-[5]: https://github.com/futhr/spree-last-address/blob/master/LICENSE.md
-[6]: https://github.com/dancinglightning
-[7]: https://github.com/futhr/spree-last-address/graphs/contributors
+[5]: https://github.com/dancinglightning
+[6]: https://github.com/futhr/spree-last-address/graphs/contributors
+[7]: https://github.com/futhr/spree-last-address/blob/master/LICENSE.md
