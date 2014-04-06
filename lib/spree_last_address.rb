@@ -1,4 +1,4 @@
-require "spree_last_address/version"
+require 'spree_last_address/version'
 
 module SpreeLastAddress
   class Engine < Rails::Engine
@@ -6,7 +6,7 @@ module SpreeLastAddress
     config.autoload_paths += %W(#{config.root}/lib)
 
     def self.activate
-      Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
+      Dir.glob(File.join(File.dirname(__FILE__), '../app/**/*_decorator*.rb')) do |c|
         Rails.env.production? ? require(c) : load(c)
       end
     end
@@ -21,8 +21,7 @@ module SpreeLastAddress
         bill_address = order.bill_address.clone if order.bill_address
         ship_address = order.ship_address.clone if order.ship_address
       end
-      #puts "Found address= #{bill_address} "
-      return bill_address , ship_address
+      return bill_address, ship_address
     end
   end
 end

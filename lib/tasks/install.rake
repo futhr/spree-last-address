@@ -21,5 +21,4 @@ namespace :spree_last_address do
       Spree::FileUtilz.mirror_files(source, destination)
     end
   end
-
 end

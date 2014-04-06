@@ -19,16 +19,13 @@ a way in your app to set an address), then it will just use the address from use
 order.
 
 Installation
-=============
-
-Just put this in your Gemfile:
-
-gem 'spree_last_address', :git => "git://github.com/TylerRick/spree_last_address.git"
-
-Contributors
 ============
 
-* kenscotthlebek
-* TylerRick
+Just put this in your `Gemfile`:
 
-Copyright (c) 2010 [Torsten Rüger], released under the New BSD License
+gem 'spree_last_address', '~> 1.0.0'
+
+License
+=======
+
+Copyright (c) 2010 Torsten Rüger, released under the New BSD License
