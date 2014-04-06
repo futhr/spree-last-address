@@ -1,8 +1,8 @@
 # Spree Last Address
 
-[![Build Status](https://api.travis-ci.org/futhr/spree-last-address.png?branch=master)](http://travis-ci.org/futhr/spree-last-address)
+[![Build Status](https://api.travis-ci.org/futhr/spree-last-address.png?branch=2-2-stable)](http://travis-ci.org/futhr/spree-last-address)
 [![Code Climate](https://codeclimate.com/github/futhr/spree-last-address.png)](https://codeclimate.com/github/futhr/spree-last-address)
-[![Coverage Status](https://coveralls.io/repos/futhr/spree-last-address/badge.png?branch=master)](https://coveralls.io/r/futhr/spree-last-address)
+[![Coverage Status](https://coveralls.io/repos/futhr/spree-last-address/badge.png?branch=2-2-stable)](https://coveralls.io/r/futhr/spree-last-address)
 
 During checkout, causes the address to be prefilled with the address from their most recent order or the user’s saved address (if available).
 
@@ -18,7 +18,7 @@ As of Spree 1.2, the `belongs_to :bill_address` and `belongs_to :ship_address` a
 
 Add to your `Gemfile`
 ```ruby
-gem 'spree_last_address', github: 'futhr/spree-last-address', branch: 'master'
+gem 'spree_last_address', '~> 2.2.0'
 ```
 
 Run
