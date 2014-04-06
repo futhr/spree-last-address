@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_runtime_dependency 'spree_core', '~> 2.3.0.beta'
+  s.add_runtime_dependency 'spree_core', '~> 2.1.0'
 
   s.add_development_dependency 'capybara', '~> 2.2.1'
   s.add_development_dependency 'poltergeist', '1.5.0'
