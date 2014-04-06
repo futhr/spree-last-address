@@ -1,3 +1,16 @@
 module SpreeLastAddress
-  VERSION = '1.0.1'
+
+  # Returns the version of the currently loaded SpreeLastAddress as a <tt>Gem::Version</tt>
+  def self.version
+    Gem::Version.new VERSION::STRING
+  end
+
+  module VERSION
+    MAJOR = 1
+    MINOR = 0
+    TINY  = 1
+    PRE   = nil
+
+    STRING = [MAJOR, MINOR, TINY, PRE].compact.join('.')
+  end
 end
