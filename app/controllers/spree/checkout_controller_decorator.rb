@@ -17,7 +17,7 @@ module Spree
     end
 
     def find_last_used_addresses(email)
-      past = Spree::Order.order("id desc").where(email: email).where("state != 'cart'").limit(8)
+      past = Spree::Order.order(id: :desc).where(email: email).where.not(state: 'cart').limit(8)
       if order = past.detect(&:bill_address)
         bill_address = order.bill_address.clone if order.bill_address
         ship_address = order.ship_address.clone if order.ship_address
