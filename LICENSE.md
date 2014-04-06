@@ -1,4 +1,4 @@
-Copyright (c) 2014 Torsten Rüger and contributors.
+Copyright (c) 2011-2014 Tobias Bohwalli, Torsten Rüger, and other contributors.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
