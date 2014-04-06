@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Last Address', js: true do
+feature 'Last Address', :js do
   stub_authorization!
 
   given!(:user) { create(:user) }
@@ -22,7 +22,7 @@ feature 'Last Address', js: true do
     click_button 'Save and Continue'
   end
 
-  context 'visit address again,', js: true do
+  context 'visit address again,' do
     scenario 'shows the last saved address info' do
       add_product_to_cart
       click_button 'Checkout'
