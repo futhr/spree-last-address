@@ -1,6 +1,8 @@
 Last Address extension for Spree
 ================================
 
+[![Gem Version](https://badge.fury.io/rb/spree-last-address.png)](http://badge.fury.io/rb/spree-last-address)
+
 During checkout, causes the address to be prefilled with the address from their most recent order or
 the user’s saved address (if available).
 
@@ -23,7 +25,9 @@ Installation
 
 Just put this in your `Gemfile`:
 
+```ruby
 gem 'spree_last_address', '~> 1.0.0'
+```
 
 License
 =======
