@@ -6,7 +6,7 @@ require 'spree_last_address/version'
 
 Gem::Specification.new do |s|
   s.platform     = Gem::Platform::RUBY
-  s.name         = 'spree_last_address'
+  s.name         = 'spree-last-address'
   s.version      = SpreeLastAddress.version
   s.summary      = 'Prefill address with last-used address'
   s.description  = %q{During checkout, causes the address to be prefilled with the address from their most recent order or the user's saved address.}
