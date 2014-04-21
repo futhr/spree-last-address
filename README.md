@@ -19,7 +19,7 @@ As of Spree 1.2, the `belongs_to :bill_address` and `belongs_to :ship_address` a
 
 Add to your `Gemfile`
 ```ruby
-gem 'spree_last_address', '~> 2.2.0'
+gem 'spree-last-address', '~> 2.2.0'
 ```
 
 Run
