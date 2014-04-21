@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe Spree::CheckoutController do
   stub_authorization!
 

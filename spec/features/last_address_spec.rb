@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 feature 'Last Address', :js do
   stub_authorization!
 
