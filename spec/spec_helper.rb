@@ -17,8 +17,26 @@ require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 require 'rspec/rails'
 require 'ffaker'
 
+ActiveRecord::Migration.maintain_test_schema!
+ActiveRecord::Migration.check_pending!
+
 RSpec.configure do |config|
-  config.mock_with :rspec
+
+  config.fail_fast = false
+  config.filter_run focus: true
+  config.run_all_when_everything_filtered = true
+
+  # config.profile_examples = 10
+
+  config.expect_with :rspec do |expectations|
+    # expectations.syntax = :expect
+  end
+
+  config.mock_with :rspec do |mocks|
+    # mocks.syntax = :expect
+    # mocks.verify_partial_doubles = true
+  end
+
   config.use_transactional_fixtures = false
   config.treat_symbols_as_metadata_keys_with_true_values = true
 end
