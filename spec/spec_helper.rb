@@ -17,7 +17,6 @@ require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 require 'rspec/rails'
 require 'ffaker'
 
-ActiveRecord::Migration.maintain_test_schema!
 ActiveRecord::Migration.check_pending!
 
 RSpec.configure do |config|
