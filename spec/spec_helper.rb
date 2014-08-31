@@ -10,7 +10,7 @@ SimpleCov.start do
   add_group 'Libraries', 'lib'
 end
 
-ENV['RAILS_ENV'] = 'test'
+ENV['RAILS_ENV'] ||= 'test'
 
 require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 
@@ -25,19 +25,17 @@ RSpec.configure do |config|
   config.filter_run focus: true
   config.run_all_when_everything_filtered = true
 
-  # config.profile_examples = 10
+  config.raise_errors_for_deprecations!
+  config.infer_spec_type_from_file_location!
 
   config.expect_with :rspec do |expectations|
-    # expectations.syntax = :expect
+    expectations.syntax = :expect
   end
 
   config.mock_with :rspec do |mocks|
-    # mocks.syntax = :expect
-    # mocks.verify_partial_doubles = true
+    mocks.syntax = :expect
+    mocks.verify_partial_doubles = true
   end
-
-  config.use_transactional_fixtures = false
-  config.treat_symbols_as_metadata_keys_with_true_values = true
 end
 
-Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
+Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |file| require file }

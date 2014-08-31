@@ -1,4 +1,4 @@
-feature 'Last Address', :js do
+RSpec.feature 'Last Address', :js, type: :feature do
   stub_authorization!
 
   given!(:user) { create(:user) }
