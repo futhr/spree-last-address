@@ -13,9 +13,9 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 1.9.3'
 
   s.authors      = ['Tobias Bohwalli', 'Torsten Rüger']
-  s.email        = 'hi@futhr.io'
+  s.email        = ['hi@futhr.io', 'torsten@villataika.fi']
   s.homepage     = 'http://github.com/futhr/spree_last_address'
-  s.license      = %q{BSD-3}
+  s.license      = 'BSD-3'
 
   s.files        = `git ls-files`.split("\n")
   s.test_files   = `git ls-files -- spec/*`.split("\n")
@@ -24,15 +24,15 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'spree_core', '~> 2.2.0'
 
-  s.add_development_dependency 'capybara', '~> 2.2.1'
-  s.add_development_dependency 'poltergeist', '1.5.0'
-  s.add_development_dependency 'selenium-webdriver'
-  s.add_development_dependency 'factory_girl', '~> 4.4'
-  s.add_development_dependency 'ffaker'
-  s.add_development_dependency 'rspec-rails', '~> 2.14'
+  s.add_development_dependency 'capybara', '~> 2.4.0'
+  s.add_development_dependency 'poltergeist', '>= 1.5.0'
+  s.add_development_dependency 'selenium-webdriver', '>= 2.41'
+  s.add_development_dependency 'factory_girl', '>= 4.4'
+  s.add_development_dependency 'ffaker', '>= 1.24'
+  s.add_development_dependency 'rspec-rails', '~> 3.0.0'
   s.add_development_dependency 'sqlite3', '~> 1.3.9'
-  s.add_development_dependency 'simplecov', '~> 0.7.1'
-  s.add_development_dependency 'database_cleaner', '~> 1.2.0'
+  s.add_development_dependency 'simplecov', '~> 0.9.0'
+  s.add_development_dependency 'database_cleaner', '~> 1.3.0'
   s.add_development_dependency 'coffee-rails', '~> 4.0.0'
   s.add_development_dependency 'sass-rails', '~> 4.0.0'
   s.add_development_dependency 'pry-rails'
