@@ -1,9 +1,9 @@
 # Spree Last Address
 
-[![Build Status](https://api.travis-ci.org/futhr/spree-last-address.png?branch=2-2-stable)](http://travis-ci.org/futhr/spree-last-address)
-[![Code Climate](https://codeclimate.com/github/futhr/spree-last-address.png)](https://codeclimate.com/github/futhr/spree-last-address)
-[![Coverage Status](https://coveralls.io/repos/futhr/spree-last-address/badge.png?branch=2-2-stable)](https://coveralls.io/r/futhr/spree-last-address)
-[![Gem Version](https://badge.fury.io/rb/spree-last-address.png)](http://badge.fury.io/rb/spree-last-address)
+[![Build Status](https://travis-ci.org/futhr/spree-last-address.svg?branch=2-2-stable)](https://travis-ci.org/futhr/spree-last-address)
+[![Code Climate](https://codeclimate.com/github/futhr/spree-last-address/badges/gpa.svg)](https://codeclimate.com/github/futhr/spree-last-address)
+[![Coverage Status](https://img.shields.io/coveralls/futhr/spree-last-address.svg)](https://coveralls.io/r/futhr/spree-last-address?branch=2-2-stable)
+[![Gem Version](https://badge.fury.io/rb/spree-last-address.svg)](http://badge.fury.io/rb/spree-last-address)
 
 During checkout, causes the address to be prefilled with the address from their most recent order or the user’s saved address (if available).
 
@@ -40,8 +40,8 @@ Copyright (c) 2010-2014 [Tobias Bohwalli][4], [Torsten Rüger][5], and other [co
 
 [1]: https://github.com/swistak/spree-default-addresses
 [2]: https://github.com/spree/spree_auth_devise
-[3]: https://github.com/futhr/spree-last-address/blob/master/CONTRIBUTING.md
+[3]: https://github.com/futhr/spree-last-address/blob/2-2-stable/CONTRIBUTING.md
 [4]: https://github.com/futhr
 [5]: https://github.com/dancinglightning
 [6]: https://github.com/futhr/spree-last-address/graphs/contributors
-[7]: https://github.com/futhr/spree-last-address/blob/master/LICENSE.md
+[7]: https://github.com/futhr/spree-last-address/blob/2-2-stable/LICENSE.md
