@@ -1,6 +1,6 @@
 # coding: utf-8
 lib = File.expand_path('../lib/', __FILE__)
-$:.unshift lib unless $:.include?(lib)
+$LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
 
 require 'spree_last_address/version'
 
@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.name         = 'spree-last-address'
   s.version      = SpreeLastAddress.version
   s.summary      = 'Prefill address with last-used address'
-  s.description  = %q{During checkout, causes the address to be prefilled with the address from their most recent order or the user's saved address.}
+  s.description  = "During checkout, causes the address to be prefilled with the address from their most recent order or the user's saved address."
   s.required_ruby_version = '>= 1.9.3'
 
   s.authors      = ['Tobias Bohwalli', 'Torsten Rüger']
