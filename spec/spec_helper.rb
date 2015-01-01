@@ -16,11 +16,11 @@ require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 
 require 'rspec/rails'
 require 'ffaker'
+require 'pry'
 
 ActiveRecord::Migration.check_pending!
 
 RSpec.configure do |config|
-
   config.fail_fast = false
   config.filter_run focus: true
   config.run_all_when_everything_filtered = true

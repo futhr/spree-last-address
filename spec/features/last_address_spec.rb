@@ -1,4 +1,4 @@
-RSpec.feature 'Last Address', :js, type: :feature do
+RSpec.feature 'Last Address', :js do
   stub_authorization!
 
   given!(:user) { create(:user) }
@@ -46,14 +46,14 @@ RSpec.feature 'Last Address', :js, type: :feature do
 
   def check_address_info(kind)
     addr = "order_#{kind}_address_attributes_"
-    find("##{addr}lastname")['value'].should eq address.firstname
-    find("##{addr}firstname")['value'].should eq address.lastname
-    find("##{addr}address1")['value'].should eq address.address1
-    find("##{addr}address2")['value'].should eq address.address2
-    find("##{addr}city")['value'].should eq address.city
-    find("##{addr}zipcode")['value'].should eq address.zipcode
-    find("##{addr}phone")['value'].should eq address.phone
-    find_field("#{addr}country_id").value.should eq '1'
+    expect(find("##{addr}lastname")['value']).to eq address.firstname
+    expect(find("##{addr}firstname")['value']).to eq address.lastname
+    expect(find("##{addr}address1")['value']).to eq address.address1
+    expect(find("##{addr}address2")['value']).to eq address.address2
+    expect(find("##{addr}city")['value']).to eq address.city
+    expect(find("##{addr}zipcode")['value']).to eq address.zipcode
+    expect(find("##{addr}phone")['value']).to eq address.phone
+    expect(find_field("#{addr}country_id").value).to eq '1'
   end
 
   def add_product_to_cart
