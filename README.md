@@ -36,7 +36,7 @@ See corresponding [contribution guidelines][3].
 
 ## License
 
-Copyright (c) 2010-2014 [Tobias Bohwalli][4], [Torsten Rüger][5], and other [contributors][6], released under the [New BSD License][7]
+Copyright (c) 2010-2015 [Tobias Bohwalli][4], [Torsten Rüger][5], and other [contributors][6], released under the [New BSD License][7]
 
 [1]: https://github.com/swistak/spree-default-addresses
 [2]: https://github.com/spree/spree_auth_devise
