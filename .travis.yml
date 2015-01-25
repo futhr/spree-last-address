@@ -8,6 +8,7 @@ matrix:
   allow_failures:
     - rvm: 2.2
 sudo: false
+cache: bundler
 branches:
   except:
     - 1-0-stable
