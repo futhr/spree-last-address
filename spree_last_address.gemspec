@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'ffaker', '>= 1.24'
   s.add_development_dependency 'rspec-rails', '~> 3.8.0'
   s.add_development_dependency 'sqlite3', '~> 1.3.10'
-  s.add_development_dependency 'simplecov', '~> 0.9.0'
+  s.add_development_dependency 'simplecov', '~> 0.16.1'
   s.add_development_dependency 'database_cleaner', '~> 1.7.0'
   s.add_development_dependency 'coffee-rails', '~> 4.0.0'
   s.add_development_dependency 'sass-rails', '~> 4.0.0'
